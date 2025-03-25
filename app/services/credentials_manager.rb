@@ -17,7 +17,9 @@ class CredentialsManager
 
   def generate
     return "Key already exists at #{key_path}. Aborting to prevent overwriting." if File.exist?(key_path)
-    return "Credentials file already exists at #{credentials_path}. Aborting to prevent overwriting." if File.exist?(credentials_path)
+    if File.exist?(credentials_path)
+      return "Credentials file already exists at #{credentials_path}. Aborting to prevent overwriting."
+    end
 
     FileUtils.mkdir_p(File.dirname(@key_path))
     FileUtils.mkdir_p(File.dirname(credentials_path))
