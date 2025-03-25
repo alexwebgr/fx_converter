@@ -4,6 +4,6 @@ source "https://rubygems.org"
 
 gem "activesupport"
 gem "rspec"
-gem "rubocop"
 gem "simplecov"
+gem "webmock"
 gem "tty-prompt"

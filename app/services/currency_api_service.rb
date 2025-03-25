@@ -3,7 +3,7 @@
 require 'net/http'
 require_relative "credentials_manager"
 
-class ConverterService
+class CurrencyApiService
   BASE_URL = "https://api.currencyapi.com/v3/"
 
   # format USD
@@ -53,8 +53,6 @@ class ConverterService
     }
 
     call_service(endpoint, url_params)
-
-    # {meta: {last_updated_at: "2025-03-23T23:59:59Z"}, data: {JPY: {code: "JPY", value: 162.2623073797}, USD: {code: "USD", value: 1.0841751739}}}
   end
 
   def historical
