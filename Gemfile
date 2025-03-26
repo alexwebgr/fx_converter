@@ -3,7 +3,10 @@
 source "https://rubygems.org"
 
 gem "activesupport"
-gem "rspec"
-gem "simplecov"
-gem "webmock"
 gem "tty-prompt"
+
+group :test do
+  gem "rspec"
+  gem "simplecov"
+  gem "webmock"
+end
